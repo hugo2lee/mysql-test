@@ -51,7 +51,7 @@ class User(db.Model, ModelHelper):
 
 def add_some():
     form = {
-        'username': 'hugo',
+        'username': 'lee',
         'password': '123',
         'avatar': 'hugo post',
     }
