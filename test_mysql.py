@@ -72,11 +72,10 @@ def db_build():
 
 
 def test():
-    # db_build()
+    db_build()
     # manager.run()
-    # db_build()
     # add_some()
-    find_item('123')
+    # find_item('123')
 
 if __name__ == '__main__':
     test()
