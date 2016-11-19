@@ -74,8 +74,8 @@ def db_build():
 def test():
     # db_build()
     # manager.run()
-    add_some()
-    # find_item('123')
+    # add_some()
+    find_item('123')
 
 if __name__ == '__main__':
     test()
