@@ -53,7 +53,7 @@ def add_some():
     form = {
         'username': 'hugo',
         'password': '123',
-        'avatar': 'gua3',
+        'avatar': 'hugo post',
     }
     user = User(form)
     user.save()
@@ -72,9 +72,9 @@ def db_build():
 
 
 def test():
-    db_build()
+    # db_build()
     # manager.run()
-    # add_some()
+    add_some()
     # find_item('123')
 
 if __name__ == '__main__':
