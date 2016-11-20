@@ -75,11 +75,51 @@
     INNER JOIN products
     ON vendors.vend_id = products.vend_id
 
+--11, 高级联结 （LEFT OUTER JOIN xx ON）
+    SELECT p1.prod_id, p1.prod_name FROM products AS p1, produts AS p2
+    WHERE p1.vend_id = p2.=vend_id AND p2.prod_id = 'DTNTR';
+    --自联结, 从同一表的某列筛选出某语句再作条件筛选出另一表的某列的符合条件的某几语句
 
+    SELECT customers.cust_id, orders.order_num FROM customers LEFT(RIGHT)
+    OUTER JOIN orders ON customer.cust_id = orders.cust_id;
+    --外部联结, 外部联结还包括没有关联行的行。在使用OUTER JOIN语法时，
+    必须使用RIGHT或LEFT关键字指定包括其所有行的表(LEFT/RIGHT指出的是OUTER JOIN左/右边的表)
 
+    结合使用 COUNT(xx) FROM xx LEFT OUTER JOIN xx ON
 
+--12, 组合查询 （UNION）
+    --用来连接多条 SELECT 语句，不推荐使用
 
+--13， INSERT 插入语句
+    INSERT INTO Customers VALUES ( xx, xx, xx和列的行数一一对应 ）;
+    INSERT INTO Customers ( xx, xx) VALUES ( yy, yy yy 由 xx 指定）;
+    多条 INSERT 用 ; 连接, 或使用多个 VALUES
+    INSERT INTO Customers ( xx, xx) VALUES ( yy, yy ），( yy, yy ）;
 
+--14， UPDATE 更新行语句
+    UPDATE IGNORE customers SET cust_name = 'xx', cust_email = 'xx'
+    WHERE cust_id = 10005
+    --IGNORE插入发生错误时忽略，没有 WHERE 会把全部行都更新，删除某行时 赋值为 NULL
+
+--15， DELETE 删除行语句
+    DELETE FROM customers WHERE cust_id = 10006
+    --没有 where 筛选会删除所有行
+    --TRUNCATE table xx 实际是删除原来的表并重新创建一个表，而不是逐行删除表中的数据
+
+--16， CREATE 创建语句
+    CREATE DATEBASE XX;
+    --创建一个库
+    CREATE TABLE xx ( yy int      NOT NULL AUTO_INCREMENT,
+                      zz chaR(50) NOT NULL DEFAULT 1) ENGINE=InnoDB;
+    --完整创建表
+
+--17， ALTER 更新表
+    ALTER TABLE xx ADD yy CHAR(20);
+    --向 xx 表增加 yy 列
+    ALTER TABLE xx DROP COLUMN yy CHAR(20);
+    --从 xx 表删除 yy 列
+
+--18，DROP TABLE xx; RENAME TABLE xx TO yy;
 
 
 问题描述：
